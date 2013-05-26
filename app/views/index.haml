@@ -1,5 +1,35 @@
-%h1
-  Welcome
-
-%p
-  Hello #{name}
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title Tech-Pro
+    %link{:href => "/css/bootstrap.css", :rel => "stylesheet"}/
+    :css
+      body {
+        padding-top: 60px; 
+      }
+    %link{:href => "../assets/css/bootstrap-responsive.css", :rel => "stylesheet"}/
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container
+          %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.brand{:href => "#"} Tech-Pro
+          .nav-collapse.collapse
+            %ul.nav
+              %li.active
+                %a{:href => "#"} Home
+              %li
+                %a{:href => "#about"} About
+          / /.nav-collapse
+    .container
+      %h1 Welcome
+      %p
+        Hello, %= name
+    / /container
+    /Le javascript
+    / Placed at the end of the document so the pages load faster
+    %script{:src => "/js/bootstrap.js"}
