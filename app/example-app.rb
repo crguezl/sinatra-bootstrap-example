@@ -10,8 +10,8 @@ module Example
 
     get '/' do
       puts current_dir
-      haml :index, :locals => { :name => 'World!' }
-      #erb :index, :locals => { :name => 'World!' }
+      haml :index, :locals => { :name => 'Class!' }
+      #erb :index, :locals => { :name => 'Class!' }
     end
 
     get '/:name' do |name|
